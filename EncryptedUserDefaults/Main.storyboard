@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EncryptedUserDefault" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-H2-cge">
+                                <rect key="frame" x="32" y="363.66666666666669" width="329" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Hia-6y-hc8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZP-1C-gsR">
+                                <rect key="frame" x="32" y="449.66666666666669" width="329" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vxn-hb-Dye"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOP-Td-UzO">
+                                <rect key="frame" x="166" y="531.66666666666663" width="61" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Ti-Zi-2aF"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemTealColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveValueAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K83-Zg-EGu"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="215-OZ-DPO">
+                                <rect key="frame" x="32" y="593.66666666666663" width="329" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qf5-Mn-eeo">
+                                        <rect key="frame" x="0.0" y="0.0" width="158.66666666666666" height="50"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Print All"/>
+                                        <connections>
+                                            <action selector="printAllAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DiU-aw-gFP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1X-qL-FAx">
+                                        <rect key="frame" x="170.66666666666663" y="0.0" width="158.33333333333337" height="50"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Delete All"/>
+                                        <connections>
+                                            <action selector="emptyAllKeysAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEi-6h-Wbd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jv8-09-L0p"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XOP-Td-UzO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5bP-ko-zOc"/>
+                            <constraint firstItem="215-OZ-DPO" firstAttribute="top" secondItem="XOP-Td-UzO" secondAttribute="bottom" constant="12" id="9j5-jR-uJR"/>
+                            <constraint firstItem="cbZ-H2-cge" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="9u6-tP-WI5"/>
+                            <constraint firstItem="EZP-1C-gsR" firstAttribute="leading" secondItem="cbZ-H2-cge" secondAttribute="leading" id="Db4-FA-uJT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cbZ-H2-cge" secondAttribute="trailing" constant="32" id="JQr-s7-vb1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="215-OZ-DPO" secondAttribute="trailing" constant="32" id="NNb-J7-5ej"/>
+                            <constraint firstItem="XOP-Td-UzO" firstAttribute="top" secondItem="EZP-1C-gsR" secondAttribute="bottom" constant="32" id="Nlq-0l-dlQ"/>
+                            <constraint firstItem="215-OZ-DPO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="iC7-4c-BkU"/>
+                            <constraint firstItem="EZP-1C-gsR" firstAttribute="trailing" secondItem="cbZ-H2-cge" secondAttribute="trailing" id="iOA-SG-xnx"/>
+                            <constraint firstItem="cbZ-H2-cge" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-50" id="qVU-4K-Br6"/>
+                            <constraint firstItem="EZP-1C-gsR" firstAttribute="top" secondItem="cbZ-H2-cge" secondAttribute="bottom" constant="36" id="rmr-mA-ZB5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="keyField" destination="cbZ-H2-cge" id="0aQ-pS-C0T"/>
+                        <outlet property="valueField" destination="EZP-1C-gsR" id="gTP-gh-ged"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="-13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
